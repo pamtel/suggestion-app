@@ -2,6 +2,10 @@
 
 This is a sample Next.js project created to demonstrate how to structure a Next.js application and use different features.
 
+## GitHub Repository
+
+You can find the source code for this project on [GitHub](https://github.com/pamtel/suggestion-app.git).
+
 ## Getting Started
 
 To get started with this project, follow these steps:
