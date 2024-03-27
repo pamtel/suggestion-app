@@ -1,5 +1,5 @@
 // import { ChevronDownIcon } from '@chakra-ui/icons';
-import { Box, Button, Flex, HStack, IconButton, Image, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, HStack, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 
 const Navbar = () => {
@@ -18,12 +18,11 @@ const Navbar = () => {
         <Box>
           <HStack>
             <Image src='/svg/bulb.svg' alt="Bulb" />
-            <Text fontSize='18px' fontWeight={700} color="#FFFFFF">6 Suggestions</Text>
+            <Text fontSize='18px' fontWeight={700} color="#FFFFFF" pl='20px'>6 Suggestions</Text>
             <Box px='30px'>
               <HStack>
                 <Text fontSize='14px' fontWeight={400} color="#FFFFFF">Sort by : <Text as='b'>Most Upvotes</Text></Text>
-                {/* <ChevronDownIcon w={8} h={8} /> */}
-                {/* <IconButton aria-label='Search database' icon={<ChevronDownIcon />} /> */}
+                <Image src='/svg/arrowUp.svg' alt='arrow-up' />
               </HStack>
             </Box>
           </HStack>

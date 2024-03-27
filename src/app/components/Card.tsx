@@ -19,9 +19,9 @@ const Card = () => {
           <Box>
             <HStack>
               <VStack bg='#F2F4FE' borderRadius='10px' py='12px' px='8px'>
-                <Text fontSize='13px' fontWeight={700} color='#3A4374'>{item.id}</Text>
+                <Text fontSize='13px' w="20px" textAlign='center' fontWeight={700} color='#3A4374'>{item.id}</Text>
               </VStack>
-              <Box px='20px' textAlign='start'>
+              <Box px='24px' textAlign='start'>
                 <Text color='#3A4374' fontSize='18px' fontWeight={700} pb='5px'>
                   {item.heading}
                 </Text>
