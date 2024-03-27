@@ -67,6 +67,7 @@ const Sidebar = () => {
                   border='none'
                   mr={index !== categoriesInRows.length - 1 ? 4 : 0}
                   cursor='pointer'
+                  onClick={() => handleCategoryClick(cat.name)}
                 >
                   <Text color={activeCategory === cat.name ? '#FFFFFF' : '#4661E6'} fontSize='13px' fontWeight={600}>
                     {cat.name}
