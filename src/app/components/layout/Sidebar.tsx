@@ -1,8 +1,13 @@
+
+'use client';
+
+import React, { useState } from 'react'
 import { Box, Button, Flex, Text, VStack } from '@chakra-ui/react'
-import React from 'react'
 import { categoryData, roadMapData } from '../../util'
 
 const Sidebar = () => {
+
+  const [activeCategory, setActiveCategory] = useState('All');
 
   const FrontendMentor = () => {
     return (
@@ -23,6 +28,11 @@ const Sidebar = () => {
       </Box>
     )
   }
+
+  const handleCategoryClick = (categoryName: string) => {
+    setActiveCategory(categoryName);
+  };
+
 
   const Category = () => {
     const categoriesInRows = [
@@ -49,7 +59,7 @@ const Sidebar = () => {
                 <Button
                   key={cat.id}
                   size='sm'
-                  bg='#F2F4FF'
+                  bg={activeCategory === cat.name ? '#4661E6' : '#F2F4FF'}
                   borderRadius='10px'
                   py='8px'
                   px='16px'
@@ -58,7 +68,7 @@ const Sidebar = () => {
                   mr={index !== categoriesInRows.length - 1 ? 4 : 0}
                   cursor='pointer'
                 >
-                  <Text color='#4661E6' fontSize='13px' fontWeight={600}>
+                  <Text color={activeCategory === cat.name ? '#FFFFFF' : '#4661E6'} fontSize='13px' fontWeight={600}>
                     {cat.name}
                   </Text>
                 </Button>
