@@ -1,4 +1,4 @@
-# My Next.js Project
+# My Next.js 14 Project
 
 This is a sample Next.js project created to demonstrate how to structure a Next.js application and use different features.
 

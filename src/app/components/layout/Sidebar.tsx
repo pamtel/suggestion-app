@@ -14,10 +14,10 @@ const Sidebar = () => {
         py="80px"
         bg='linear-gradient(90deg, rgba(122,152,251,1) 18%, rgba(163,55,246,1) 40%, rgba(251,181,122,1) 96%)'
       >
-        <Text fontSize='20px' fontWeight={700} py='2px'>
+        <Text fontSize='20px' fontWeight={700} py='2px' color="#FFFFFF">
           Frontend Mentor
         </Text>
-        <Text fontSize='15px' fontWeight={500}>
+        <Text fontSize='15px' fontWeight={500} color="#FFFFFF">
           Feedback Board
         </Text>
       </Box>

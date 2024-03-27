@@ -8,7 +8,7 @@ const Navbar = () => {
       w='100%'
       bg='#373F68'
       px='20px'
-      py='10px'
+      py='20px'
       borderRadius='10px'
     >
       <Flex
@@ -17,11 +17,11 @@ const Navbar = () => {
       >
         <Box>
           <HStack>
-            <Image src='/public/svg/bulb.svg' alt="Bulb" />
-            <Text fontSize='18px' fontWeight={700}>6 Suggestions</Text>
+            <Image src='/svg/bulb.svg' alt="Bulb" />
+            <Text fontSize='18px' fontWeight={700} color="#FFFFFF">6 Suggestions</Text>
             <Box px='30px'>
               <HStack>
-                <Text fontSize='14px' fontWeight={400}>Sort by : <Text as='b'>Most Upvotes</Text></Text>
+                <Text fontSize='14px' fontWeight={400} color="#FFFFFF">Sort by : <Text as='b'>Most Upvotes</Text></Text>
                 {/* <ChevronDownIcon w={8} h={8} /> */}
                 {/* <IconButton aria-label='Search database' icon={<ChevronDownIcon />} /> */}
               </HStack>

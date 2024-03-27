@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Jost', sans-serif;
-  src: url('/public/fonts/Jost-Regular.ttf') format('truetype');
+  src: url('/fonts/Jost-Regular.ttf') format('truetype');
 }
 
 * {
@@ -18,7 +18,6 @@ body {
 
 body {
   background: #F7F8FD;
-  color: '#000';
   display: flex;
   justify-content: center;
 }

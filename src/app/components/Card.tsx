@@ -44,7 +44,7 @@ const Card = () => {
           </Box>
           <Box>
             <HStack>
-              <Image src='../assets/path.png' alt='path' />
+              <Image src='/images/path.png' alt='path' />
               <Text color='#3A4374' fontSize='16px' fontWeight={700}>
                 {item.message}
               </Text>
