@@ -6,6 +6,7 @@ import { Navbar, Sidebar } from '../components/layout';
 import Card from '../components/Card';
 import Popup from '../components/Popup';
 import { cardData } from '../util';
+import EmptyState from '../components/EmptyState';
 
 function Suggestions() {
 
@@ -39,12 +40,15 @@ function Suggestions() {
           <Box position="sticky">
             <Navbar onCardClick={openPopup} SuggestionsNumber={filteredCards.length} />
           </Box>
-          <Box mt="30px" position='relative'>
-            <Card selectedCategory={selectedCategory} />
-            {isOpen && (
-              <Popup isOpen={isOpen} onClose={closePopup} />
-            )}
-          </Box>
+          {filteredCards.length === 0 ?
+            <EmptyState /> :
+            <Box mt="30px" position='relative'>
+              <Card selectedCategory={selectedCategory} />
+              {isOpen && (
+                <Popup isOpen={isOpen} onClose={closePopup} />
+              )}
+            </Box>
+          }
         </Box>
       </Flex>
     </Box>
