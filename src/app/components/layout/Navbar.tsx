@@ -2,7 +2,12 @@ import { cardData } from '@/app/util'
 import { Box, Button, Flex, HStack, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const Navbar = ({ onCardClick }: any) => {
+type NavbarProps = {
+  onCardClick: () => void;
+  SuggestionsNumber: number;
+}
+
+const Navbar = ({ onCardClick, SuggestionsNumber }: NavbarProps) => {
   return (
     <Box
       w='100%'
@@ -18,7 +23,7 @@ const Navbar = ({ onCardClick }: any) => {
         <Box>
           <HStack>
             <Image src='/svg/bulb.svg' alt="Bulb" />
-            <Text fontSize='18px' fontWeight={700} color="#FFFFFF" pl='20px'>{cardData.length} Suggestions</Text>
+            <Text fontSize='18px' fontWeight={700} color="#FFFFFF" pl='20px'>{SuggestionsNumber} Suggestions</Text>
             <Box px='30px'>
               <HStack onClick={onCardClick} cursor='pointer'>
                 <Text fontSize='14px' fontWeight={400} color="#FFFFFF">Sort by : <Text as='b'>Most Upvotes</Text></Text>

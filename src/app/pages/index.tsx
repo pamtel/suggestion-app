@@ -5,6 +5,7 @@ import { Box, Flex } from '@chakra-ui/react';
 import { Navbar, Sidebar } from '../components/layout';
 import Card from '../components/Card';
 import Popup from '../components/Popup';
+import { cardData } from '../util';
 
 function Suggestions() {
 
@@ -25,6 +26,9 @@ function Suggestions() {
     setSelectedCategory(category);
   };
 
+  const filteredCards = selectedCategory === 'All' ?
+    cardData : cardData.filter(card => card.category === selectedCategory);
+
   return (
     <Box position='relative'>
       <Flex>
@@ -33,7 +37,7 @@ function Suggestions() {
         </Box>
         <Box ml="280px" width='100%'>
           <Box position="sticky">
-            <Navbar onCardClick={openPopup} />
+            <Navbar onCardClick={openPopup} SuggestionsNumber={filteredCards.length} />
           </Box>
           <Box mt="30px" position='relative'>
             <Card selectedCategory={selectedCategory} />
