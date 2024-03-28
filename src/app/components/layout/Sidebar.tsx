@@ -5,9 +5,13 @@ import React, { useState } from 'react'
 import { Box, Button, Flex, Text, VStack } from '@chakra-ui/react'
 import { categoryData, roadMapData } from '../../util'
 
-const Sidebar = () => {
+type sidebarFunc = {
+  onCategoryFilter: (category: string) => void;
+}
 
-  const [activeCategory, setActiveCategory] = useState('All');
+const Sidebar = ({ onCategoryFilter }: sidebarFunc) => {
+
+  const [activeCategory, setActiveCategory] = useState<string>('All');
 
   const FrontendMentor = () => {
     return (
@@ -30,7 +34,9 @@ const Sidebar = () => {
   }
 
   const handleCategoryClick = (categoryName: string) => {
+    console.log('categoryName', categoryName)
     setActiveCategory(categoryName);
+    onCategoryFilter(categoryName);
   };
 
 

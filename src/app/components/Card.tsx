@@ -2,10 +2,11 @@ import { Box, Button, Flex, HStack, Image, Text, VStack } from '@chakra-ui/react
 import React from 'react'
 import { cardData } from '../util'
 
-const Card = () => {
+const Card = ({ selectedCategory }: { selectedCategory: string }) => {
+  const filteredCards = selectedCategory === 'All' ? cardData : cardData.filter(card => card.category === selectedCategory);
   return (
-    <Box w='100%'>
-      {cardData.map((item, index) => (
+    <Box w='100%' position='relative'>
+      {filteredCards.map((item, index) => (
         <Flex
           key={index}
           justifyContent='space-between'
@@ -52,7 +53,6 @@ const Card = () => {
           </Box>
         </Flex>
       ))}
-
     </Box>
   )
 }

@@ -2,7 +2,7 @@ import { cardData } from '@/app/util'
 import { Box, Button, Flex, HStack, Image, Text } from '@chakra-ui/react'
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({ onCardClick }: any) => {
   return (
     <Box
       w='100%'
@@ -20,7 +20,7 @@ const Navbar = () => {
             <Image src='/svg/bulb.svg' alt="Bulb" />
             <Text fontSize='18px' fontWeight={700} color="#FFFFFF" pl='20px'>{cardData.length} Suggestions</Text>
             <Box px='30px'>
-              <HStack>
+              <HStack onClick={onCardClick} cursor='pointer'>
                 <Text fontSize='14px' fontWeight={400} color="#FFFFFF">Sort by : <Text as='b'>Most Upvotes</Text></Text>
                 <Image src='/svg/arrowUp.svg' alt='arrow-up' />
               </HStack>
