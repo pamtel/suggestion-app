@@ -17,7 +17,7 @@ const Popup = ({ isOpen, onClose }: any) => {
         boxShadow='0px 10px 15px -3px rgba(0,0,0,0.1);'
       >
         <ModalBody>
-          {comments.map((u, index) => (
+          {comments.map((v, index) => (
             <Box py='8px' cursor='pointer' borderEnd='1px'>
               <Text
                 key={index}
@@ -25,7 +25,7 @@ const Popup = ({ isOpen, onClose }: any) => {
                 color='#647196'
                 px='3px'
               >
-                {u.com}
+                {v.com}
               </Text>
             </Box>
           ))}
