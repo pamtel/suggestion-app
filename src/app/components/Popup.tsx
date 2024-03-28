@@ -18,12 +18,13 @@ const Popup = ({ isOpen, onClose }: any) => {
       >
         <ModalBody>
           {comments.map((v, index) => (
-            <Box py='8px' cursor='pointer' borderEnd='1px'>
+            <Box py='8px' cursor='pointer' borderEndWidth='1px' borderColor='#3A4374'>
               <Text
                 key={index}
                 fontSize='16px'
                 color='#647196'
-                px='3px'
+                px='20px'
+                _hover={{ color: '#AD1FEA' }}
               >
                 {v.com}
               </Text>
