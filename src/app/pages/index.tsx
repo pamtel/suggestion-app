@@ -14,8 +14,8 @@ function Suggestions() {
 
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const openPopup = () => {
-    setIsOpen(true);
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
   };
 
   const closePopup = () => {
@@ -38,7 +38,7 @@ function Suggestions() {
         </Box>
         <Box ml="280px" width='100%'>
           <Box position="sticky">
-            <Navbar onCardClick={openPopup} SuggestionsNumber={filteredCards.length} />
+            <Navbar onCardClick={togglePopup} isOpen={isOpen} SuggestionsNumber={filteredCards.length} />
           </Box>
           {filteredCards.length === 0 ?
             <EmptyState /> :

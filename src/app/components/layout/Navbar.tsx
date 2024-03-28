@@ -4,10 +4,11 @@ import React from 'react'
 
 type NavbarProps = {
   onCardClick: () => void;
+  isOpen: boolean;
   SuggestionsNumber: number;
 }
 
-const Navbar = ({ onCardClick, SuggestionsNumber }: NavbarProps) => {
+const Navbar = ({ onCardClick, isOpen, SuggestionsNumber }: NavbarProps) => {
   return (
     <Box
       w='100%'
@@ -27,7 +28,10 @@ const Navbar = ({ onCardClick, SuggestionsNumber }: NavbarProps) => {
             <Box px='30px'>
               <HStack onClick={onCardClick} cursor='pointer'>
                 <Text fontSize='14px' fontWeight={400} color="#FFFFFF">Sort by : <Text as='b'>Most Upvotes</Text></Text>
-                <Image src='/svg/arrowUp.svg' alt='arrow-up' />
+                {isOpen === true ?
+                  <Image src='/svg/arrowDown.svg' alt='arrow-up' /> :
+                  <Image src='/svg/arrowUp.svg' alt='arrow-up' />
+                }
               </HStack>
             </Box>
           </HStack>
